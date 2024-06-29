@@ -63,31 +63,31 @@
           left: 0;
         }
         .login-form-container {
-           width: 100%;
-          height: 85%;
+          width: 100%;
+          height: 80%;
           background: rgba(255, 251, 251, 1);
           position: absolute;
-          top: 15%;
+          top: 20%;
           left: 0;
-          border-top-left-radius: 240px;
+          border-top-left-radius: 190px;
           border-top-right-radius: 10px;
         }
         .logo {
-          width: 30%;
+          width: 20%;
           aspect-ratio: 1 / 1;
           background: url("images/logo.png");
           background-repeat: no-repeat;
           background-position: center center;
           background-size: contain;
           position: absolute;
-          top: 17%;
+          top: 21%;
           left: 50%;
           transform: translateX(-50%);
         }
         .login-title {
           color: rgba(85, 155, 238, 1);
           position: absolute;
-          top: 34%;
+          top: 38%;
           left: 50%;
           transform: translateX(-50%);
           font-weight: 800;
@@ -97,34 +97,31 @@
         .input-container {
           width: 80%;
           position: absolute;
-          top: 38.6%;
+          top: 44%;
           left: 10%;
         }
         .input-field {
           width: 100%;
-          height: 56px;
+          height: 35px;
           background: rgba(255, 255, 255, 1);
-          border: 2px solid #000;
-          border-radius: 12px;
-          font-size: 1.4rem;
+          border: 1px solid #000;
+          border-radius: 8px;
           padding: 10px;
-          margin-bottom: 14px;
+          margin-bottom: 15px;
         }
         .login-button-container {
-         width: 84%;
-          height: 69px;
+          width: 80%;
+          height: 42px;
           position: absolute;
           top: 63%;
           left: 10%;
-          padding-left: 20px;
-          
         }
         .login-button {
-          width: 90%;
+          width: 100%;
           height: 100%;
           background: rgba(85, 155, 238, 1);
           border-radius: 30px;
-          box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         }
         .login-button-text {
           color: rgba(247, 250, 255, 1);
@@ -132,55 +129,56 @@
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
-          font-weight: bolder;
-          font-size: 2rem;
-          padding-right: 40px;
+          font-weight: bold;
+          font-size: 21px;
         }
         .signup-link {
           color: rgba(8, 99, 205, 1);
           position: absolute;
-          top: 69%;
+          top: 71%;
           right: 10%;
-          font-weight: bold;
-          font-size: 1.8rem;
+          font-weight: 500;
+          font-size: 16px;
           text-decoration: none;
-          padding-top: 10px;
         }
         .signup-prompt {
-          color: grey;
+          color: rgba(0, 0, 0, 1);
           position: absolute;
-          top: 69%;
+          top: 71%;
           left: 10%;
-          font: bold;
-          font-size: 1.7rem;
-          padding-top: 15px;
+          font-weight: 300;
+          font-size: 16px;
         }
         .remember-forgot-container {
           width: 80%;
           position: absolute;
-          top: 58%;
+          top: 59%;
           left: 10%;
         }
         .forgot-password,
         .remember-me {
           color: rgba(8, 99, 205, 1);
-          font-size: 1.5rem;
+          font-size: 11px;
         }
         .forgot-password {
           position: absolute;
+          top: 0;
           right: 0;
         }
         .remember-me {
           position: absolute;
-          left: 36px;
+          top: 0;
+          left: 20px;
         }
         .remember-checkbox {
-          width: 28px;
-          height: 28px;
+          width: 16px;
+          height: 16px;
           background: rgba(255, 255, 255, 1);
-          border: 2px solid rgba(0, 0, 0, 1);
-          border-radius: 6px;
+          border: 1px solid rgba(0, 0, 0, 1);
+          border-radius: 4px;
           position: absolute;
+          top: 0;
+          left: 0;
         }
       }
     </style>
@@ -253,7 +251,7 @@
       <span class="login-title">LOGIN</span>
       <div class="input-container">
         <div>
-          <label class="block text-black font-bold pb-3 text-2xl">Email ID</label>
+          <label>Email ID</label>
           <input
             type="email"
             placeholder="some.mail@university.com"
@@ -261,7 +259,7 @@
           />
         </div>
         <div>
-          <label class="block text-black font-bold pb-3 text-2xl">Password</label>
+          <label>Password</label>
           <input type="password" placeholder="********" class="input-field" />
         </div>
       </div>
