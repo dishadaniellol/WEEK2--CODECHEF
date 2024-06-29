@@ -12,6 +12,7 @@
       href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
       .bg-blur {
         background-image: url("images/bg.png");
@@ -73,7 +74,7 @@
           border-top-right-radius: 10px;
         }
         .logo {
-          width: 20%;
+          width: 22%;
           aspect-ratio: 1 / 1;
           background: url("images/logo.png");
           background-repeat: no-repeat;
@@ -97,7 +98,7 @@
         .input-container {
           width: 80%;
           position: absolute;
-          top: 37%;
+          top: 35.2%;
           left: 10%;
         }
         .input-field {
@@ -106,14 +107,14 @@
           background: rgba(255, 255, 255, 1);
           border: 2px solid #000;
           border-radius: 8px;
-          padding: 10px;
+          padding: 10px 10px 10px 35px;
           margin-bottom: 15px;
         }
         .signup-button-container {
           width: 80%;
           height: 42px;
           position: absolute;
-          top: 82%;
+          top: 81.2%;
           left: 10%;
         }
         .signup-button {
@@ -135,7 +136,7 @@
         .login-link {
           color: rgba(8, 99, 205, 1);
           position: absolute;
-          top: 88%;
+          top: 86.2%;
           right: 10%;
           font-weight: 500;
           font-size: 16px;
@@ -144,7 +145,7 @@
         .login-prompt {
           color: rgba(0, 0, 0, 1);
           position: absolute;
-          top: 88%;
+          top: 86.2%;
           left: 10%;
           font-weight: 300;
           font-size: 16px;
@@ -174,45 +175,53 @@
                   type="text"
                   placeholder="First name"
                   class="w-1/2 h-8 px-3 py-2 border border-black rounded-md border-solid"
+                  style="padding-left: 10px;"
                 />
                 <input
                   type="text"
                   placeholder="Last name"
                   class="w-1/2 h-8 px-3 py-2 border border-black rounded-md border-solid"
+                  style="padding-left: 10px;"
                 />
               </div>
             </div>
-            <div class="mb-4">
+            <div class="mb-4 relative">
               <label class="block text-black font-bold">Email ID</label>
+              <i class="fa-regular fa-circle-user absolute left-3 top-8 text-black"></i>
               <input
                 type="email"
                 placeholder="some.mail@university.com"
-                class="w-full h-8 px-3 py-2 border border-black rounded-md border-solid"
+                class="w-full h-8 px-10 py-2 border border-black rounded-md border-solid"
               />
             </div>
-            <div class="mb-4">
+            <div class="mb-4 relative">
               <label class="block text-black font-bold">Phone Number</label>
+              <i class="fa-regular fa-address-book absolute left-3 top-8 text-black"></i>
               <input
                 type="tel"
                 placeholder="+91 ***** *****"
-                class="w-full h-8 px-3 py-2 border border-black rounded-md border-solid"
+                class="w-full h-8 px-10 py-2 border border-black rounded-md border-solid"
               />
             </div>
-            <div class="mb-4">
+            <div class="mb-4 relative">
               <label class="block text-black font-bold">Password</label>
+              <i class="fa-solid fa-lock absolute left-3 top-8 text-black"></i>
               <input
                 type="password"
                 placeholder="********"
-                class="w-full h-8 px-3 py-2 border border-black rounded-md border-solid"
+                class="w-full h-8 px-10 py-2 border border-black rounded-md border-solid"
               />
+              <i class="fas fa-eye absolute right-3 top-8 text-black cursor-pointer"></i>
             </div>
-            <div class="mb-4">
+            <div class="mb-4 relative">
               <label class="block text-black font-bold">Confirm Password</label>
+              <i class="fa-solid fa-lock absolute left-3 top-8 text-black"></i>
               <input
                 type="password"
                 placeholder="********"
-                class="w-full h-8 px-3 py-2 border border-black rounded-md border-solid"
+                class="w-full h-8 px-10 py-2 border border-black rounded-md border-solid"
               />
+              <i class="fas fa-eye absolute right-3 top-8 text-black cursor-pointer"></i>
             </div>
             <button
               type="submit"
@@ -242,46 +251,54 @@
       <span class="signup-title">SIGN UP</span>
       <div class="input-container">
         <div>
-          <label>Name</label>
+          <label class="font-extrabold">Name</label>
           <div class="flex space-x-4">
             <input
               type="text"
               placeholder="First name"
               class="input-field w-1/2"
+              style="padding-left: 10px;"
             />
             <input
               type="text"
               placeholder="Last name"
               class="input-field w-1/2"
+              style="padding-left: 10px;"
             />
           </div>
         </div>
-        <div>
-          <label>Email ID</label>
+        <div class="relative">
+          <label class="font-extrabold">Email ID</label>
+          <i class="fa-regular fa-circle-user absolute left-3 top-8 text-black"></i>
           <input
             type="email"
             placeholder="some.mail@university.com"
             class="input-field"
           />
         </div>
-        <div>
-          <label>Phone Number</label>
+        <div class="relative">
+          <label class="font-extrabold">Phone Number</label>
+          <i class="fa-regular fa-address-book absolute left-3 top-8 text-black"></i>
           <input type="tel" placeholder="+91 ***** *****" class="input-field" />
         </div>
-        <div>
-          <label>Password</label>
+        <div class="relative">
+          <label class="font-extrabold">Password</label>
+          <i class="fa-solid fa-lock absolute left-3 top-8 text-black"></i>
           <input type="password" placeholder="********" class="input-field" />
+          <i class="fas fa-eye absolute right-3 top-8 text-black cursor-pointer"></i>
         </div>
-        <div>
-          <label>Confirm Password</label>
+        <div class="relative">
+          <label class="font-extrabold">Confirm Password</label>
+          <i class="fa-solid fa-lock absolute left-3 top-8 text-black"></i>
           <input type="password" placeholder="********" class="input-field" />
+          <i class="fas fa-eye absolute right-3 top-8 text-black cursor-pointer"></i>
         </div>
       </div>
       <div class="signup-button-container">
         <div class="signup-button"></div>
         <span class="signup-button-text">Sign Up</span>
       </div>
-      <a href="index.html" class="login-link">Log In</a>
+      <a href="index.html" class="login-link font-extrabold">Log In</a>
       <span class="login-prompt">Already have an account?</span>
     </div>
 
