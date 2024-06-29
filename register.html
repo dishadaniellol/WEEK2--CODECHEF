@@ -69,11 +69,11 @@
           position: absolute;
           top: 15%;
           left: 0;
-          border-top-left-radius: 240px;
+          border-top-left-radius: 190px;
           border-top-right-radius: 10px;
         }
         .logo {
-          width: 30%;
+          width: 20%;
           aspect-ratio: 1 / 1;
           background: url("images/logo.png");
           background-repeat: no-repeat;
@@ -94,41 +94,34 @@
           font-size: 6vw;
           white-space: nowrap;
         }
- 
         .input-container {
           width: 80%;
           position: absolute;
-          top: 38.6%;
+          top: 40%;
           left: 10%;
         }
         .input-field {
           width: 100%;
-          height: 56px;
+          height: 35px;
           background: rgba(255, 255, 255, 1);
-          border: 2px solid #000;
-          border-radius: 12px;
-          font-size: 1.4rem;
+          border: 1px solid #000;
+          border-radius: 8px;
           padding: 10px;
-          margin-bottom: 14px;
+          margin-bottom: 15px;
         }
         .signup-button-container {
-          width: 84%;
-          height: 65px;
+          width: 80%;
+          height: 42px;
           position: absolute;
-          top: 85.4%;
+          top: 84%;
           left: 10%;
-          padding-left: 20px;
-          
-          
         }
         .signup-button {
-          width: 90%;
+          width: 100%;
           height: 100%;
           background: rgba(85, 155, 238, 1);
           border-radius: 30px;
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        
-          
         }
         .signup-button-text {
           color: rgba(247, 250, 255, 1);
@@ -136,28 +129,25 @@
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
-          font-weight: bolder;
-          font-size: 2rem;
-          padding-right: 40px;
+          font-weight: bold;
+          font-size: 21px;
         }
         .login-link {
           color: rgba(8, 99, 205, 1);
           position: absolute;
           top: 91%;
           right: 10%;
-          font-weight: bold;
-          font-size: 1.8rem;
+          font-weight: 500;
+          font-size: 16px;
           text-decoration: none;
-          padding-top: 10px;
         }
         .login-prompt {
-          color: grey;
+          color: rgba(0, 0, 0, 1);
           position: absolute;
           top: 91%;
           left: 10%;
-          font: bold;
-          font-size: 1.7rem;
-          padding-top: 15px;
+          font-weight: 300;
+          font-size: 16px;
         }
       }
     </style>
@@ -233,7 +223,7 @@
             <div class="text-center mt-4 flex flex-row justify-between">
               <p class="text-gray-600">Already have an account?</p>
               <p>
-                <a href="index.html" class="text-blue-500 font-bold text-lg"
+                <a href="login.html" class="text-blue-500 font-bold text-lg"
                   >Log In</a
                 >
               </p>
@@ -252,7 +242,7 @@
       <span class="signup-title">SIGN UP</span>
       <div class="input-container">
         <div>
-          <label class="block text-black font-bold pb-3 text-2xl" >Name</label>
+          <label>Name</label>
           <div class="flex space-x-4">
             <input
               type="text"
@@ -267,7 +257,7 @@
           </div>
         </div>
         <div>
-          <label class="block text-black font-bold pb-3 text-2xl">Email ID</label>
+          <label>Email ID</label>
           <input
             type="email"
             placeholder="some.mail@university.com"
@@ -275,15 +265,15 @@
           />
         </div>
         <div>
-          <label class="block text-black font-bold pb-3 text-2xl" >Phone Number</label>
+          <label>Phone Number</label>
           <input type="tel" placeholder="+91 ***** *****" class="input-field" />
         </div>
         <div>
-          <label class="block text-black font-bold pb-3 text-2xl">Password</label>
+          <label>Password</label>
           <input type="password" placeholder="********" class="input-field" />
         </div>
         <div>
-          <label class="block text-black font-bold pb-3 text-2xl">Confirm Password</label>
+          <label>Confirm Password</label>
           <input type="password" placeholder="********" class="input-field" />
         </div>
       </div>
@@ -291,7 +281,7 @@
         <div class="signup-button"></div>
         <span class="signup-button-text">Sign Up</span>
       </div>
-      <a href="index.html" class="login-link">Log In</a>
+      <a href="login.html" class="login-link">Log In</a>
       <span class="login-prompt">Already have an account?</span>
     </div>
 
