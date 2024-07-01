@@ -24,6 +24,30 @@
         border-radius: 50px;
       }
 
+      /* Desktop checkbox styles */
+      #desktopCheckbox {
+        background-color: white;
+        border: 1px solid black;
+        transition: background-color 0.3s, border-color 0.3s;
+      }
+      #desktopCheckbox.checked {
+        background-color: #559BEE;
+        border-color: #559BEE;
+      }
+      #desktopCheckbox::after {
+        content: '\2713';
+        color: white;
+        display: none;
+        font-size: 12px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      #desktopCheckbox.checked::after {
+        display: block;
+      }
+
       /* Mobile styles */
       @media (max-width: 767px) {
         * {
@@ -81,7 +105,7 @@
           background-position: center center;
           background-size: contain;
           position: absolute;
-          top: 21%;
+          top: 24.2%;
           left: 50%;
           transform: translateX(-50%);
         }
@@ -153,13 +177,13 @@
         .remember-forgot-container {
           width: 80%;
           position: absolute;
-          top: 61%;
+          top: 62%;
           left: 10%;
         }
         .forgot-password,
         .remember-me {
           color: rgba(8, 99, 205, 1);
-          font-size: 11px;
+          font-size: 12.5px;
         }
         .forgot-password {
           position: absolute;
@@ -174,12 +198,27 @@
         .remember-checkbox {
           width: 16px;
           height: 16px;
-          background: rgba(255, 255, 255, 1);
-          border: 1px solid rgba(0, 0, 0, 1);
+          background: white;
+          border: 2px solid black;
           border-radius: 4px;
           position: absolute;
           top: 0;
           left: 0;
+          cursor: pointer;
+          transition: background-color 0.3s, border-color 0.3s;
+        }
+        .remember-checkbox.checked {
+          background-color: #559BEE;
+          border-color: #559BEE;
+        }
+        .remember-checkbox.checked::after {
+          content: '\2713';
+          font-size: 14px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: white;
         }
       }
     </style>
@@ -219,14 +258,11 @@
           </div>
           <div class="flex items-center justify-between mb-4">
             <label class="inline-flex items-center">
-              <input type="checkbox" class="form-checkbox" />
-              <span class="ml-2 text-blue-600 text-md font-normal"
-                >Remember Me</span
-              >
+              <input type="checkbox" class="hidden" id="desktopRememberMe" />
+              <span class="w-4 h-4 border border-black rounded inline-block mr-2 cursor-pointer relative" id="desktopCheckbox"></span>
+              <span class="ml-2 text-blue-600 text-md font-normal">Remember Me</span>
             </label>
-            <a href="#" class="text-blue-600 text-md font-normal"
-              >Forgot Password?</a
-            >
+            <a href="#" class="text-blue-600 text-md font-normal">Forgot Password?</a>
           </div>
           <button
             type="submit"
@@ -279,7 +315,7 @@
       <div class="remember-forgot-container">
         <span class="forgot-password">Forgot Password?</span>
         <span class="remember-me">Remember Me</span>
-        <div class="remember-checkbox"></div>
+        <div class="remember-checkbox" id="mobileCheckbox"></div>
       </div>
     </div>
 
@@ -298,6 +334,20 @@
 
       window.addEventListener("resize", handleResize);
       handleResize();
+
+      const desktopCheckbox = document.getElementById('desktopCheckbox');
+      const desktopRememberMe = document.getElementById('desktopRememberMe');
+
+      desktopCheckbox.addEventListener('click', function() {
+        desktopRememberMe.checked = !desktopRememberMe.checked;
+        this.classList.toggle('checked');
+      });
+
+      const mobileCheckbox = document.getElementById('mobileCheckbox');
+      
+      mobileCheckbox.addEventListener('click', function() {
+        this.classList.toggle('checked');
+      });
     </script>
   </body>
 </html>
